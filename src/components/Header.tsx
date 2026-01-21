@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import pinnLogo from "@/assets/pinn-logo.jpg";
-import { PROJECT, NAV_SECTIONS } from "@/data/projectData";
-import { Calendar, User, GitBranch, Layers } from "lucide-react";
+import { PROJECT, NAV_SECTIONS, PRINCIPLES } from "@/data/projectData";
+import { Calendar, User, GitBranch, Layers, Lightbulb } from "lucide-react";
 
 export const Header = () => {
   const now = new Date();
@@ -26,7 +26,7 @@ export const Header = () => {
           >
             <img
               src={pinnLogo}
-              alt="Pinn Logo"
+              alt="Logo"
               className="h-full w-full object-cover"
             />
           </motion.div>
@@ -66,6 +66,28 @@ export const Header = () => {
               {item}
             </motion.span>
           ))}
+        </div>
+
+        {/* Principles */}
+        <div className="mt-4 p-3 rounded-xl border border-dark-border bg-dark-card/30">
+          <div className="flex items-center gap-2 mb-2">
+            <Lightbulb className="h-4 w-4 text-gold" />
+            <span className="text-xs font-semibold uppercase tracking-wider text-gold">Princípios</span>
+          </div>
+          <ul className="space-y-1.5">
+            {PRINCIPLES.map((principle, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 + i * 0.05 }}
+                className="flex items-start gap-2 text-xs text-dark-muted"
+              >
+                <span className="mt-1.5 h-1 w-1 rounded-full bg-gold/60 flex-shrink-0" />
+                <span>{principle}</span>
+              </motion.li>
+            ))}
+          </ul>
         </div>
 
         {/* Navigation */}

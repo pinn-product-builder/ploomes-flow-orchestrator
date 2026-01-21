@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { OverviewSection } from "@/components/OverviewSection";
+import { RolesSection } from "@/components/RolesSection";
 import { PipelinesSection } from "@/components/PipelinesSection";
 import { DataModelSection } from "@/components/DataModelSection";
 import { WorkflowsSection } from "@/components/WorkflowsSection";
@@ -22,6 +23,7 @@ const Index = () => {
 
         <main className="mt-8 space-y-10">
           <OverviewSection />
+          <RolesSection />
           <PipelinesSection />
           <DataModelSection />
           <WorkflowsSection />
