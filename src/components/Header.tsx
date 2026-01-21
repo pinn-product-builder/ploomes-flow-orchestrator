@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import pinnLogo from "@/assets/pinn-logo.jpg";
-import { PROJECT, NAV_SECTIONS, PRINCIPLES } from "@/data/projectData";
-import { Calendar, User, GitBranch, Layers, Lightbulb } from "lucide-react";
+import { PROJECT, NAV_SECTIONS } from "@/data/projectData";
+import { Calendar, User, GitBranch, Layers } from "lucide-react";
 
 export const Header = () => {
   const now = new Date();
@@ -13,22 +13,16 @@ export const Header = () => {
       transition={{ duration: 0.5 }}
       className="relative overflow-hidden rounded-2xl border border-dark-border bg-gradient-to-br from-dark-panel via-dark-card to-dark-panel p-6 shadow-lg"
     >
-      {/* Background glow effect */}
       <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-gold/10 blur-3xl" />
       <div className="absolute -left-10 bottom-0 h-40 w-40 rounded-full bg-gold/5 blur-2xl" />
 
       <div className="relative z-10">
-        {/* Logo and Title */}
         <div className="flex items-start gap-4 mb-4">
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="h-14 w-14 rounded-xl overflow-hidden shadow-lg ring-2 ring-gold/30"
           >
-            <img
-              src={pinnLogo}
-              alt="Logo"
-              className="h-full w-full object-cover"
-            />
+            <img src={pinnLogo} alt="Logo" className="h-full w-full object-cover" />
           </motion.div>
           <div className="flex-1">
             <h1 className="text-xl md:text-2xl font-bold text-dark-text">
@@ -42,55 +36,27 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Meta pills */}
         <div className="flex flex-wrap gap-2 mt-4">
           <MetaPill icon={<GitBranch className="h-3.5 w-3.5" />} label="Versão" value={PROJECT.version} />
-          <MetaPill icon={<User className="h-3.5 w-3.5" />} label="Dono" value={PROJECT.owner} />
+          <MetaPill icon={<User className="h-3.5 w-3.5" />} label="Propriedade" value={PROJECT.property} />
           <MetaPill icon={<Calendar className="h-3.5 w-3.5" />} label="Gerado" value={now.toLocaleDateString("pt-BR")} />
         </div>
 
-        {/* Stack */}
         <div className="mt-4 flex flex-wrap gap-2">
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold/20 bg-gold/5">
             <Layers className="h-3.5 w-3.5 text-gold" />
             <span className="text-xs font-medium text-dark-muted">Stack:</span>
           </div>
           {PROJECT.stack.map((item, i) => (
-            <motion.span
+            <span
               key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: i * 0.05 }}
-              className="px-3 py-1.5 rounded-full text-xs font-medium border border-dark-border bg-dark-card/50 text-dark-text/80 hover:border-gold/30 hover:bg-gold/5 transition-colors cursor-default"
+              className="px-3 py-1.5 rounded-full text-xs font-medium border border-dark-border bg-dark-card/50 text-dark-text/80"
             >
               {item}
-            </motion.span>
+            </span>
           ))}
         </div>
 
-        {/* Principles */}
-        <div className="mt-4 p-3 rounded-xl border border-dark-border bg-dark-card/30">
-          <div className="flex items-center gap-2 mb-2">
-            <Lightbulb className="h-4 w-4 text-gold" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-gold">Princípios</span>
-          </div>
-          <ul className="space-y-1.5">
-            {PRINCIPLES.map((principle, i) => (
-              <motion.li
-                key={i}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 + i * 0.05 }}
-                className="flex items-start gap-2 text-xs text-dark-muted"
-              >
-                <span className="mt-1.5 h-1 w-1 rounded-full bg-gold/60 flex-shrink-0" />
-                <span>{principle}</span>
-              </motion.li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Navigation */}
         <nav className="mt-5 flex flex-wrap gap-2">
           {NAV_SECTIONS.map((section, i) => (
             <motion.a
