@@ -19,12 +19,12 @@ export const AcceptanceSection = () => {
 
   return (
     <section className="space-y-4">
-      <SectionHeader
-        id="aceite"
-        title="Critérios de aceite (Definition of Done)"
-        description="Quando dá pra dizer que 'está pronto' e operando."
-        icon={CheckCircle}
-      />
+    <SectionHeader
+      id="aceite"
+      title="Critérios de aceite (Definition of Done)"
+      description="O que precisa estar funcionando para considerar a implementação concluída."
+      icon={CheckCircle}
+    />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

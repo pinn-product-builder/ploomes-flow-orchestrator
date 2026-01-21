@@ -8,7 +8,7 @@ export const RisksSection = () => (
     <SectionHeader
       id="riscos"
       title="Riscos e mitigação"
-      description="Pontos que quebram a operação — e como evitar."
+      description="Principais pontos que quebram projetos multi-CRM — e como evitar."
       icon={AlertTriangle}
     />
 

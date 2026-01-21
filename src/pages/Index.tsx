@@ -1,10 +1,9 @@
 import { Header } from "@/components/Header";
 import { OverviewSection } from "@/components/OverviewSection";
+import { BoundariesSection } from "@/components/BoundariesSection";
 import { RolesSection } from "@/components/RolesSection";
-import { PipelinesSection } from "@/components/PipelinesSection";
-import { DataModelSection } from "@/components/DataModelSection";
-import { WorkflowsSection } from "@/components/WorkflowsSection";
 import { PhasesSection } from "@/components/PhasesSection";
+import { WorkflowsSection } from "@/components/WorkflowsSection";
 import { AcceptanceSection } from "@/components/AcceptanceSection";
 import { RisksSection } from "@/components/RisksSection";
 import { Footer } from "@/components/Footer";
@@ -23,11 +22,10 @@ const Index = () => {
 
         <main className="mt-8 space-y-10">
           <OverviewSection />
+          <BoundariesSection />
           <RolesSection />
-          <PipelinesSection />
-          <DataModelSection />
-          <WorkflowsSection />
           <PhasesSection />
+          <WorkflowsSection />
           <AcceptanceSection />
           <RisksSection />
         </main>

@@ -1,65 +1,28 @@
 import { SectionHeader } from "./SectionHeader";
 import { Card, BulletList } from "./Card";
-import { Eye, Users, Cpu, Shield } from "lucide-react";
+import { Eye } from "lucide-react";
+import { OBJECTIVES, EXPECTED_RESULTS, PRINCIPLES } from "@/data/projectData";
 
 export const OverviewSection = () => (
   <section className="space-y-4">
     <SectionHeader
       id="visao"
-      title="Visão geral (Ploomes como CRM único)"
-      description="Toda a operação vive no Ploomes: SDR IA, AE, proposta, forecast, documentos, pós-venda e CS. O n8n executa automações e integrações externas."
+      title="Visão geral do projeto"
+      description="Estrutura recomendada: Kommo para SDR/conversa e execução rápida, Ploomes para AE/forecast/documentos e 'fonte da verdade', e n8n para dedupe, roteamento, cadências e integrações."
       icon={Eye}
     />
 
     <div className="grid gap-4 md:grid-cols-3">
-      <Card
-        kicker="Papéis"
-        title="Quem opera"
-        description="Processo end-to-end no mesmo CRM."
-        delay={0.1}
-      >
-        <BulletList
-          items={[
-            "SDR IA: cadência, qualificação rápida e nurturing.",
-            "AE: qualificação profunda, discovery, proposta e negociação.",
-            "Barbara/Renan: aprovações e validações específicas.",
-            "CSM/PM: kickoff, execução, renovação, expansion, advocacy.",
-          ]}
-        />
+      <Card kicker="Objetivos" title="O que precisa melhorar" description="Velocidade na ponta + governança no núcleo." delay={0.1}>
+        <BulletList items={OBJECTIVES} />
       </Card>
 
-      <Card
-        kicker="Tecnologia"
-        title="O que fica fora do Ploomes"
-        description="Somente integrações e automações."
-        delay={0.15}
-      >
-        <BulletList
-          items={[
-            "Envio e tracking de email (opens/clicks) via provedor.",
-            "Calendário (eventos e lembretes).",
-            "ClickUp (projetos e tasks de entrega).",
-            "Storage (versionamento de proposta/contrato/anexos).",
-            "n8n como orquestrador e motor de cadências.",
-          ]}
-        />
+      <Card kicker="Resultados esperados" title="KPIs e ganhos" description="Medir e ajustar." delay={0.15}>
+        <BulletList items={EXPECTED_RESULTS} />
       </Card>
 
-      <Card
-        kicker="Governança"
-        title="Qualidade e previsibilidade"
-        description="Sem 'dado solto'."
-        delay={0.2}
-      >
-        <BulletList
-          items={[
-            "Campos obrigatórios por etapa (hard gates).",
-            "Forecast e probabilidade com padrão e data.",
-            "Documentos sempre versionados e aprovados.",
-            "Logs/idempotência para evitar duplicidade.",
-            "Dashboards de compliance.",
-          ]}
-        />
+      <Card kicker="Princípios" title="Regras do jogo" description="Sem CRM duplo caótico." delay={0.2}>
+        <BulletList items={PRINCIPLES} />
       </Card>
     </div>
   </section>

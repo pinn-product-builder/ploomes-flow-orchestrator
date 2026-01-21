@@ -8,7 +8,7 @@ export const PhasesSection = () => (
     <SectionHeader
       id="fases"
       title="Fases do projeto (roadmap)"
-      description="Implementação incremental para entrar em produção rápido e evoluir com segurança."
+      description="Sequência para entrar em produção rápido e evoluir sem travar o time."
       icon={Calendar}
     />
 
