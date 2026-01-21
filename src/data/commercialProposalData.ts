@@ -2,47 +2,68 @@
 
 export const COMPANY_CONTEXT = {
   name: "Promaflex",
-  tagline: "Soluções de proteção de superfícies e isolamento",
-  description: "A Promaflex atua no mercado com soluções especializadas em proteção de superfícies e isolamento, atendendo diversos segmentos como indústria e construção civil.",
+  tagline: "Maior fabricante de filmes de proteção de superfície da América Latina",
+  yearsInMarket: "35+ anos",
+  description: "A Promaflex é pioneira na produção de soluções inovadoras para mercados diversos. Player internacional com produtos desenvolvidos com base em pesquisa, alta tecnologia e sustentabilidade. Uma indústria voltada à solução, com forte veia de inovação focada em resolver os problemas dos clientes.",
+  founders: ["Dr. Márcio Velletri", "Dr. Marcos Velletri"],
+  sectors: [
+    { name: "Construção Civil", description: "Proteção de obras com soluções como PromaPiso" },
+    { name: "Indústria", description: "Automobilístico, siderúrgico, moveleiro, eletroeletrônicos" },
+    { name: "Projetos Especiais", description: "Inovação tecnológica para projetos diferenciados" },
+    { name: "Varejo", description: "Produtos diretos ao consumidor como Xô Mofo" }
+  ],
   portfolio: [
-    "Filmes de proteção",
-    "Mantas e mantas termoacústicas",
+    "Filmes de proteção de superfície (líder América Latina)",
+    "PromaPiso — proteção para obras (recomendado por arquitetos)",
+    "Xô Mofo — manta térmica e antimofo para armários",
+    "Mantas termoacústicas",
     "Fitas adesivas técnicas",
-    "Rótulos e embalagens",
-    "Soluções personalizadas"
+    "Soluções personalizadas por projeto"
   ],
   highlights: [
-    "Atuação ampla em varejo e projetos especiais",
-    "Programa de representantes estruturado",
-    "Canais de atendimento e relacionamento dedicados"
+    "Líder de mercado na América Latina há mais de 35 anos",
+    "Investimento constante em tecnologia e sustentabilidade",
+    "Equipe técnica de excelência focada no cliente",
+    "Presença em feiras como Expo Revestir",
+    "Programa de representantes estruturado"
+  ],
+  testimonials: [
+    { author: "Arq. Maria Cláudia Cunha", text: "Sou fã do PromaPiso. Nunca tivemos problemas na aplicação e retirada. Recomendo para todos os profissionais." },
+    { author: "Ana Paula Aguiar", text: "O Xô Mofo é uma manta milagrosa! Estou apaixonada pelo resultado." },
+    { author: "Carlos Lollato", text: "Parabéns pelo prestígio que o nome Promaflex construiu no mercado plástico." }
   ]
 };
 
 export const CHALLENGES = [
   {
     icon: "⏱️",
-    title: "Resposta lenta = oportunidade perdida",
-    description: "Leads chegam por vários canais e a velocidade de resposta é decisiva para não perder negócios"
+    title: "Múltiplos canais, resposta lenta",
+    description: "Leads de arquitetos, construtoras, indústrias e varejo chegam por site, WhatsApp, feiras e indicações — resposta rápida é decisiva"
   },
   {
     icon: "🔀",
-    title: "Passagem de bastão confusa",
-    description: "Falta padronização na transferência do atendimento para o time comercial, causando perda de contexto"
+    title: "Vendas B2B e B2C misturadas",
+    description: "Contratos industriais exigem qualificação profunda, enquanto varejo/arquitetos precisam de agilidade. Processos diferentes no mesmo funil"
   },
   {
     icon: "❄️",
-    title: "Follow-up inconsistente",
-    description: "Dificuldade de manter acompanhamento constante faz oportunidades 'esfriarem'"
+    title: "Projetos longos esfriam",
+    description: "Especificações técnicas e aprovações demoram — sem follow-up estruturado, oportunidades se perdem"
   },
   {
     icon: "📄",
-    title: "Propostas sem organização",
-    description: "Negociações precisam de histórico, versões e aprovações para evitar ruído"
+    title: "Propostas técnicas complexas",
+    description: "Produtos personalizados exigem histórico de versões, aprovações técnicas e comerciais organizadas"
+  },
+  {
+    icon: "🏆",
+    title: "Cases de sucesso não são capturados",
+    description: "Depoimentos como da Arq. Maria Cláudia e Ana Paula mostram potencial — mas falta processo para gerar mais cases"
   },
   {
     icon: "🔄",
-    title: "Pós-venda sem processo",
-    description: "Sem estrutura clara, fica difícil renovar, expandir e criar cases de sucesso"
+    title: "Representantes sem visibilidade",
+    description: "Rede de representantes precisa de acompanhamento e pipeline organizado para maximizar resultados"
   }
 ];
 
@@ -81,10 +102,10 @@ export const SOLUTION = {
     role: "SDR / Pré-vendas",
     color: "blue",
     benefits: [
-      "Centraliza atendimento de entrada (WhatsApp, mensagens, contatos)",
-      "Garante resposta rápida com alertas automáticos",
-      "Organiza rotina de follow-up",
-      "Estrutura a qualificação inicial"
+      "Centraliza leads de feiras, site, WhatsApp e indicações",
+      "Resposta rápida para arquitetos, construtoras e indústrias",
+      "Qualificação inicial: varejo vs. projeto técnico vs. indústria",
+      "Follow-up automático para não perder especificações longas"
     ]
   },
   ploomes: {
@@ -93,10 +114,10 @@ export const SOLUTION = {
     role: "Vendas Consultivas",
     color: "green",
     benefits: [
-      "Organiza oportunidades com governança",
-      "Dá visão clara de etapas e probabilidade",
-      "Estrutura propostas e documentos",
-      "Mantém histórico completo do negócio"
+      "Pipeline separado por segmento (Construção, Indústria, Varejo)",
+      "Propostas técnicas com versões e aprovações",
+      "Forecast por probabilidade e ciclo de venda",
+      "Histórico de especificações e projetos personalizados"
     ]
   },
   automation: {
@@ -105,56 +126,56 @@ export const SOLUTION = {
     role: "Integrações",
     color: "purple",
     benefits: [
-      "Conecta sistemas sem retrabalho",
-      "Dispara lembretes e alertas",
-      "Avisa sobre negócios parados ou prioritários",
-      "Integra com calendário e gestão de projetos"
+      "Conecta atendimento inicial com gestão comercial",
+      "Alertas de projetos parados ou próximos de fechar",
+      "Lembrete para capturar cases e depoimentos (como Xô Mofo)",
+      "Integra com calendário para reuniões técnicas"
     ]
   },
-  whyBoth: "Porque um sistema é ótimo para atendimento rápido e conversa, enquanto o outro é ótimo para governança, propostas e fechamento. Juntos, cobrem toda a jornada."
+  whyBoth: "A Promaflex atende desde arquitetos que precisam de resposta rápida até indústrias com contratos complexos. Um sistema agiliza o primeiro contato, o outro organiza a negociação técnica. Juntos, cobrem toda a jornada — do lead ao case de sucesso."
 };
 
 export const JOURNEY_STEPS = [
   {
     number: 1,
-    title: "Lead chega e é atendido rapidamente",
+    title: "Lead chega por qualquer canal",
     where: "Kommo",
-    description: "O contato entra pelo canal (WhatsApp, site, indicação) e recebe resposta em minutos, não horas.",
+    description: "Arquiteto pelo Instagram, construtora pelo site, indústria por feira ou indicação — todos entram no mesmo funil e são respondidos rapidamente.",
     icon: "📥"
   },
   {
     number: 2,
-    title: "Lead é qualificado e priorizado",
+    title: "Identificação do perfil e segmento",
     where: "Kommo + Automação",
-    description: "Identificamos se é quente, morno ou frio para direcionar esforço certo.",
+    description: "É varejo (Xô Mofo)? Projeto de construção (PromaPiso)? Indústria (filme técnico)? Cada um segue uma trilha diferente.",
     icon: "🎯"
   },
   {
     number: 3,
-    title: "Follow-up automático para não esfriar",
+    title: "Follow-up para projetos longos",
     where: "Automação",
-    description: "Lembretes, tarefas e mensagens garantem que ninguém seja esquecido.",
+    description: "Especificações técnicas demoram — lembretes automáticos garantem que nenhum projeto esfrie enquanto aguarda aprovação.",
     icon: "🔔"
   },
   {
     number: 4,
-    title: "Oportunidade vai para vendas (com contexto)",
+    title: "Proposta técnica com histórico",
     where: "Kommo → Ploomes",
-    description: "Passagem organizada: o vendedor recebe tudo que precisa saber.",
+    description: "Produtos personalizados? O vendedor recebe todo o contexto: segmento, necessidade, interações anteriores.",
     icon: "🤝"
   },
   {
     number: 5,
-    title: "Proposta e negociação organizadas",
+    title: "Negociação e aprovações organizadas",
     where: "Ploomes",
-    description: "Histórico, versões, probabilidade e previsão de fechamento.",
+    description: "Versões de proposta, aprovações técnicas e comerciais, probabilidade de fechamento — tudo rastreável.",
     icon: "📋"
   },
   {
     number: 6,
-    title: "Fechou! Inicia entrega e pós-venda",
+    title: "Fechou! Entrega + captura de case",
     where: "Ploomes + Automação",
-    description: "Kickoff organizado, projeto criado, acompanhamento estruturado.",
+    description: "Kickoff do projeto, acompanhamento da entrega e — como a Arq. Maria Cláudia — potencial para virar depoimento e case.",
     icon: "🏆"
   }
 ];
