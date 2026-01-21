@@ -9,8 +9,8 @@ export const WorkflowsSection = () => (
   <section className="space-y-4">
     <SectionHeader
       id="workflows"
-      title="Workflows n8n (Ploomes-only)"
-      description="Automação robusta via Webhooks + Cron (next_action_at) e integrações externas."
+      title="Workflows n8n (como a operação roda de verdade)"
+      description="Eventos e Cron para garantir consistência (cadência, alertas e handoffs)."
       icon={Workflow}
     />
 
