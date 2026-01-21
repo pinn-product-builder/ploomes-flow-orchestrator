@@ -13,11 +13,17 @@ interface SectionHeaderProps {
 export const SectionHeader = ({ id, title, description, subtitle, icon }: SectionHeaderProps) => {
   const desc = description || subtitle;
   
-  // Check if icon is a LucideIcon (function) or ReactNode (element)
+  // Check if icon is a LucideIcon component or already a ReactNode element
   const renderIcon = () => {
     if (!icon) return null;
     
-    if (typeof icon === 'function') {
+    // If it's a valid React element (JSX), render it directly
+    if (typeof icon === 'object' && icon !== null && '$$typeof' in icon) {
+      return icon;
+    }
+    
+    // If it's a component (LucideIcon or forwardRef), instantiate it
+    if (typeof icon === 'function' || (typeof icon === 'object' && icon !== null && 'render' in icon)) {
       const Icon = icon as LucideIcon;
       return <Icon className="h-5 w-5 text-gold" />;
     }
