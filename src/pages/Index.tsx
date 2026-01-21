@@ -1,14 +1,8 @@
 import { Header } from "@/components/Header";
-import { ExecutiveSummary } from "@/components/ExecutiveSummary";
-import { ArchitectureSection } from "@/components/ArchitectureSection";
-import { GoldenRulesSection } from "@/components/GoldenRulesSection";
-import { ExecutiveTableSection } from "@/components/ExecutiveTableSection";
-import { JourneySection } from "@/components/JourneySection";
-import { WorkflowModulesSection } from "@/components/WorkflowModulesSection";
-import { RoadmapSection } from "@/components/RoadmapSection";
-import { AcceptanceSection } from "@/components/AcceptanceSection";
-import { RisksSection } from "@/components/RisksSection";
-import { Footer } from "@/components/Footer";
+import { TechnicalProposal } from "@/components/TechnicalProposal";
+import { CommercialProposal } from "@/components/commercial/CommercialProposal";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { FileText, Briefcase } from "lucide-react";
 
 const Index = () => {
   return (
@@ -22,19 +16,35 @@ const Index = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-6 md:py-10">
         <Header />
 
-        <main className="mt-8 space-y-10">
-          <ExecutiveSummary />
-          <ArchitectureSection />
-          <GoldenRulesSection />
-          <ExecutiveTableSection />
-          <JourneySection />
-          <WorkflowModulesSection />
-          <RoadmapSection />
-          <AcceptanceSection />
-          <RisksSection />
-        </main>
+        {/* Tabs for switching between proposals */}
+        <Tabs defaultValue="commercial" className="mt-8">
+          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 bg-dark-panel border border-dark-border h-12">
+            <TabsTrigger 
+              value="commercial" 
+              className="flex items-center gap-2 data-[state=active]:bg-gold/20 data-[state=active]:text-gold"
+            >
+              <Briefcase className="w-4 h-4" />
+              <span className="hidden sm:inline">Proposta Comercial</span>
+              <span className="sm:hidden">Comercial</span>
+            </TabsTrigger>
+            <TabsTrigger 
+              value="technical"
+              className="flex items-center gap-2 data-[state=active]:bg-gold/20 data-[state=active]:text-gold"
+            >
+              <FileText className="w-4 h-4" />
+              <span className="hidden sm:inline">Proposta Técnica</span>
+              <span className="sm:hidden">Técnica</span>
+            </TabsTrigger>
+          </TabsList>
 
-        <Footer />
+          <TabsContent value="commercial" className="mt-8">
+            <CommercialProposal />
+          </TabsContent>
+
+          <TabsContent value="technical" className="mt-8">
+            <TechnicalProposal />
+          </TabsContent>
+        </Tabs>
       </div>
     </div>
   );
